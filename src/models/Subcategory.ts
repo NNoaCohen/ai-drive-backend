@@ -1,9 +1,9 @@
 import { timeStamp } from "console";
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema, Document,Types } from "mongoose";
 
 export interface ISubcategory extends Document{
     name: string;
-    categoryId: mongoose.Schema.Types.ObjectId; // reference ל-Category
+    categoryId: Types.ObjectId; // reference ל-Category
 }
 
 const subcategorySchema: Schema = new Schema(

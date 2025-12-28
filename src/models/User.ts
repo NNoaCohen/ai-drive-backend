@@ -13,7 +13,7 @@ const UserSchema: Schema = new Schema(
     phone: { type: String, required: true },
     promptHistory: [{ type: mongoose.Schema.Types.ObjectId, ref: "Prompt" }],
   },
-  { timestamps: true } 
+  { timestamps: true } // createdAt, updatedAt
 );
 
 export default mongoose.model<IUser>("User", UserSchema);
